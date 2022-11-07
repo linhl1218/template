@@ -10,6 +10,6 @@ WORKDIR /usr/local/cuda/samples/5_Simulations/nbody
 
 RUN make -j"$(nproc)"
 
-ENV fprocess = "./nbody -benchmark -i=1000000" 
+ENV fprocess = "./nbody -benchmark -i=50000" 
 HEALTHCHECK --interval=5s CMD [ -e /tmp/.lock ] || exit 1
 CMD ["fwatchdog"]
