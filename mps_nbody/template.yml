@@ -1,0 +1,4 @@
+language: mps_nbody
+fprocess: ./nbody -benchmark -i=1000000
+welcome_message:
+"run MPS_nbody benchmark"
