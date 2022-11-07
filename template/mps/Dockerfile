@@ -2,7 +2,7 @@ FROM openfaas/classic-watchdog:0.18.1 as watchdog
 
 FROM nvidia/cuda:9.0-base-ubuntu16.04
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y --no-install-recommends --allow-unauthenticated\
         cuda-samples-$CUDA_PKG_VERSION && \
     rm -rf /var/lib/apt/lists/*
 
